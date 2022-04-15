@@ -1,66 +1,262 @@
-*{
-    padding: 0;
-    margin: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+* {
+  padding: 0;
+  margin: 0;
 }
 
-body{
-    background:#ffcdd2 ;
+.container {
+  height: 60px;
+  background-color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-
-.h-1{
-    font-family: 'Montserrat', sans-serif; 
-    font-size: 59px; 
-    color: rgb(216, 53, 25); 
-    
-    padding-top: 196px
-}
-h1 span{
-    
-    font-size: 55px; 
-    
+.container .logo {
+  max-width: 250px;
+  padding: 0 10px;
+  overflow: hidden;
 }
 
-.hoverr:hover{
-    color: rgb(30, 215, 96);
-    font-size: 65px;
+.container .logo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 60px;
 }
 
+.container .logo a img {
+  max-width: 100%;
+  max-height: 50px;
+  margin: 0 0 0 76px;
+}
+
+.container .navbar {
+  font-family: "Montserrat", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  justify-content: flex-end;
+  padding: 0 200px 0 0;
+}
+
+.container .navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container .navbar ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.container .navbar ul li a:hover {
+  color: rgb(30, 215, 96);
+}
+
+.container .navbar ul .close {
+  display: none;
+  text-align: right;
+  padding: 10px;
+}
+
+.container .navbar ul .close span {
+  font-size: 40px;
+  display: inline-block;
+  border: 1px solid #cccccc;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.container .navbar .icon-bar {
+  padding: 18px 8px;
+  width: 50px;
+  height: 60px;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.container .navbar .icon-bar i {
+  background-color: #ffffff;
+  height: 2px;
+}
+
+.bg{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(50deg, #ff4169 0, #7c26f8 100%);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.bgmg{
+    display: block;
+    background-image: url(bg-albums.png);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+}
+
+.h-1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 59px;
+  color: rgb(255, 255, 255);
+  margin: 0 16px 66px;
+}
+
+.hoverr:hover {
+  color: rgb(30, 215, 96);
+  font-size: 69px;
+  
+}
 
 #button{
-    background-color: rgb(216, 53, 25);
-    border-radius: 500px;
-    color: white;
-    padding: 23px 14px;
-    text-align: center;
-    font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
+    font-family:"Arial",sans-serif;
+    font-weight: 600;
+    white-space: normal;
     text-transform: uppercase;
-    font-size: 14px;
-    margin: 4px 2px;
-    cursor: pointer;
+    min-width: 160px;
+    letter-spacing: 2px;
+    border-width: 0;
+    border-radius: 500px;
+    background-color: #7c25f8;
+    color: #fff;
+    padding: 21px 56px 19px;
+    font-size: 16px;
+    margin: 20px 10px 30px;
     text-decoration: none;
-}
-#button:hover{
-  font-size: 18px;
-}
 
 
-header{
-    
-    background-color: rgb(0, 0, 0);
-    position:sticky;
-    top: 0;
-    
+}
+#button:hover {
+    background-color: #6207e3;
+    font-size: 18px;
 }
 
-nav div a img{
-    width: 211px;
-    padding: 12px;
+header {
+  background-color: rgb(0, 0, 0);
+  position: sticky;
+  top: 0;
+}
+.sac{
+    padding: 101px;
+
 }
 
-nav div{
-    justify-content: center;
-    justify-items: center;
+@media only screen and (max-width: 650px) {
+  .container {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .container .logo {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+  .container .logo a img {
+    margin: 0 0 0 10px;
+  }
+
+  .container .navbar {
+    font-family: "Montserrat", sans-serif;
+    -webkit-box-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+    padding: 0 10px;
+  }
+
+  .container .navbar ul {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    position: fixed;
+    left: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    color: #ffffff;
+    background: #222326;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    -webkit-transition: left 0.3s;
+    -o-transition: left 0.3s;
+    transition: left 0.3s;
+  }
+
+  .container .navbar ul li a {
+    padding: 10px;
+    font-size: 16px;
+    height: auto;
+    line-height: normal;
+    color: #ffffff;
+  }
+
+  .container .navbar ul .close {
+    display: block;
+  }
+
+  .container .navbar .icon-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+  }
+
+  .container .navbar ._Menus-show {
+    left: 0;
+    background: #222326;
+  }
+  .h-1 {
+    font-size: 50px;
+  }
+  .hoverr:hover {
+    color: rgb(30, 215, 96);
+    font-size: 51px;
+  }
+ 
 }
